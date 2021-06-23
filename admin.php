@@ -10,9 +10,9 @@ if($pass=='smartart'){
 <p style="text-align: right;"><span style="text-decoration: underline; color: #333399;"><strong>تم التأكد من الهوية وتسجيل الدخول كمدير </strong></span></p>
 <p style="text-align: right;"><span style="text-decoration: underline;"><strong><span style="color: #333399; text-decoration: underline;">ادناه تظهر روابط المنشورات المتوفرة ,لاضافة رد تلقائي لاحدى المنشورات انسخ رابط المنشور مع الرد المناسب</span><br /></strong></span></p>';
     $servername = "localhost";
-    $username = "id8300997_nerd";
-    $password = "smartart";
-    $dbname = "id8300997_bot";
+    $username = "removed for security reasons";
+    $password = "removed for security reasons";
+    $dbname = "removed for security reasons";
     $links="select * from posts";
     $conn = new mysqli($servername, $username, $password, $dbname);
     $sql_result=$conn->query($links);

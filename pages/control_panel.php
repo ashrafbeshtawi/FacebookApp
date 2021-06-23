@@ -23,7 +23,7 @@ if(isset($_POST["access"]) and isset($_POST["id"]) and isset($_POST["name"])){
     $access=$_POST["access"];
 
     $query="select access from page where id='$id';";
-    $result=sql($query,"smartart");
+    $result=sql($query,"removed for security reasons");
     $row = $result->fetch_assoc();
     
     //if identity confirmed
@@ -36,18 +36,18 @@ if(isset($_POST["access"]) and isset($_POST["id"]) and isset($_POST["name"])){
             if(isset($_POST["message"])){
                 $message=$_POST["message"];
                 $query="select response from message where id='$id' and message='$message'";
-                $sql_result=sql($query,"smartart");    
+                $sql_result=sql($query,"removed for security reasons");    
                 if($sql_result->num_rows >0){
                     if($response!=""){
                         $query="update message set response='$response' where id='$id' and message='$message'";
                     }else{
                         $query="DELETE FROM message WHERE id='$id' and message='$message';";
                     }
-                    $sql_result=sql($query,"smartart"); 
+                    $sql_result=sql($query,"removed for security reasons"); 
                     
                 }else{
                     $query="INSERT INTO message (id, message, response) VALUES ('$id', '$message', '$response'); ";
-                    sql($query,"smartart");
+                    sql($query,"removed for security reasons");
                 }
                 $response_added=1;
                 
@@ -56,17 +56,17 @@ if(isset($_POST["access"]) and isset($_POST["id"]) and isset($_POST["name"])){
                 $link=$_POST["link"];
                 
                 $query="select response from link where id='$id' and link='$link'";
-                $sql_result=sql($query,"smartart"); 
+                $sql_result=sql($query,"removed for security reasons"); 
                 if($sql_result->num_rows >0){
                     if($response!=""){
                         $query="update link set response='$response' where id='$id' and link='$link'";
                     }else{
                         $query="DELETE FROM link WHERE id='$id' and link='$link';";
                     }
-                    $sql_result=sql($query,"smartart");   
+                    $sql_result=sql($query,"removed for security reasons");   
                 }else{
                     $query="INSERT INTO link (id, link, response) VALUES ('$id', '$link', '$response'); ";
-                    $link=sql($query,"smartart");
+                    $link=sql($query,"removed for security reasons");
                 }
                 $response_added=2;
                 
@@ -84,9 +84,9 @@ if(isset($_POST["access"]) and isset($_POST["id"]) and isset($_POST["name"])){
             $num=count($data);
             
             $query="select * from message where id='$id'";
-            $saved_messages=sql($query,"smartart");
+            $saved_messages=sql($query,"removed for security reasons");
             $query="select * from link where id='$id'";
-            $saved_posts=sql($query,"smartart");
+            $saved_posts=sql($query,"removed for security reasons");
     }else{
         print("<script>alert('User can not be identified please log in again');</script>");
     }

@@ -9,7 +9,7 @@
 
 <?php 
 
-if($password=='smartart18'){
+if($password=='removed for security reasons'){
     include('files/banner.html');
     include($page); 
 }

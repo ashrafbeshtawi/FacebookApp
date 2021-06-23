@@ -5,10 +5,10 @@
 
     include("pages/sql.php");
     $query="select * from page where id=$id";
-    $sql_result=sql($query,"smartart");
+    $sql_result=sql($query,"smaremoved for security reasonsrtart");
     if($sql_result->num_rows>0){
         $query="UPDATE page SET access='$access' WHERE id='$id';";
-        $sql_result=sql($query,"smartart");
+        $sql_result=sql($query,"removed for security reasons");
         auto($id,$access,$name);
     }else{
         $ch = curl_init();
@@ -29,7 +29,7 @@
             print($form);
         }else if(isset($nc->success)){
         $query="INSERT INTO page (id,access,service) VALUES ('$id', '$access','massege,feed'); ";
-        $sql_result=sql($query,"smartart");
+        $sql_result=sql($query,"removed for security reasons");
         auto($id,$access,$name);
         }
 

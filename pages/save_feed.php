@@ -5,10 +5,10 @@
 
     ############################################
     ############## sql query ##################
-    $servername = "localhost";
-    $username = "id8300997_nerd";
-    $password = "smartart";
-    $dbname = "id8300997_bot";
+    $servername = "removed for security reasons";
+    $username = "removed for security reasons";
+    $password = "removed for security reasons";
+    $dbname = "removed for security reasons";
     $query="INSERT INTO feed (name,email,feed)  VALUES ('$name','$email','$feed')";
     $conn = new mysqli($servername, $username, $password, $dbname);
     $sql_result=$conn->query($query);
