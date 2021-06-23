@@ -1,0 +1,8 @@
+body {
+ background-image: url("bg.jpg");
+ color: White;
+ font-size: 18px;
+}
+
+
+.container { display:inline-block; }
